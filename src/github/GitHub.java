@@ -5,6 +5,8 @@
  */
 package github;
 
+import java.util.Date;
+
 /**
  *
  * @author gerar
@@ -18,10 +20,14 @@ public class GitHub {
     
     
     public static void main(String[] args) {
-        Persona per = new Persona(20,"Gerardo","Castro");
+        Date date;
+        date = new Date(97,3,2);
+        
+        Persona per = new Persona(20,"Gerardo","Castro",date);
         System.out.println("El siguiente programa muestra mis datos usando Java");
         
         String datosC = per.getNombreCompleto() + "\n" + "Edad: " + per.getEdad();
+        System.out.println("Fecha de nacimiento: " + per.fecha() );
         
         System.out.println(datosC);
         
